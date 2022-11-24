@@ -23,7 +23,7 @@ source ./activate
 pip install -r requirements.txt
 ```
 
- - Install git-whisper
+ - If whisper not installed (all conda packages nvidia, cuda ...) Install git-whisper (but normally ok)
 
 ```bash
 pip install git+https://github.com/openai/whisper.git
