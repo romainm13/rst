@@ -22,3 +22,17 @@ source ./activate
 ```bash
 pip install -r requirements.txt
 ```
+
+ - Install git-whisper
+
+```bash
+pip install git+https://github.com/openai/whisper.git
+```
+
+- Install `install.sh`
+
+
+```bash
+chmod +x …
+sudo ./install.sh
+```

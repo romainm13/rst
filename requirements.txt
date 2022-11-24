@@ -1,3 +1,6 @@
 flask
 requests
 ipykernel
+
+# not working here
+git+https://github.com/openai/whisper.git
