@@ -1,1 +1,8 @@
+# Environnement
 /rst_venv
+
+# Results whisper
+/whispers
+
+# Sounds files
+/sounds
