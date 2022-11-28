@@ -7,9 +7,9 @@ FOLDER_WHISPERS = 'whispers'
 
 ###################
 ###################
-model_type = 'base'
+# model_type = 'base'
 # model_type = 'small'
-# model_type = 'medium'
+model_type = 'medium'
 """
 PEUT CRASH
 
@@ -39,12 +39,12 @@ result = model.transcribe('/home/romainm13/rst/sounds/Flo - The Joke (audio-extr
 print(result["text"])
 end_transcribe = int(time.time())
 print(f"Transcribed in {end_transcribe - start_transcribe} seconds")
-
+#%%
 #store each result in 'result.txt' file
 with open(os.path.join(FOLDER_WHISPERS, model_type +".txt"), "w") as f:
-    f.write(f"Model {model_type}\nLoaded in {end_load - start_load} seconds\nTranscribed in {end_transcribe - start_transcribe} seconds\n")
-    f.write(result["text"])
-    f.write("\n\n")
+    f.write(f"Model {model_type}\nLoaded in {end_load - start_load} seconds\nTranscribed in {end_transcribe - start_transcribe} seconds")
+    f.write("\n")
+    f.write(result["text"].lstrip())
 
 #%%
 # put "\r" after each ".", "!" and "?" to make a new line
@@ -52,4 +52,7 @@ with open(os.path.join(FOLDER_WHISPERS, model_type +".txt"), "r") as f:
     data = f.read()
 data = data.replace(". ", ".\r").replace("! ", "!\r").replace("? ", "?\r")
 with open(os.path.join(FOLDER_WHISPERS, model_type +"2.txt"), "w") as f:
-    f.write(data)
+    # remove first 3 lines
+    for i, line in enumerate(data.splitlines()):
+        if i > 2:
+            f.write(line + "\r")
