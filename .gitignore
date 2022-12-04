@@ -1,9 +1,15 @@
 # Environnement
+.vscode
 /rst_venv
+__pycache__
 
+######## WHISPERS ########
 # Results whisper
-/whispers
-/texts
-
+/whispers_stats
+/rst_files
 # Sounds files
 /sounds
+
+######## FLASK APP ########
+website/__pycache__
+website/database.db

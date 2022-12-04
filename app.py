@@ -20,6 +20,13 @@ def contact():
         # traiter les données reçues
         # afficher : "Merci de m'avoir laissé un message !"
         return("POST")
+    
+@app.route('/discussion/page/<num_page>')
+def mon_chat(num_page):
+    num_page = int(num_page)
+    premier_msg = 1 + 50 * (num_page - 1)
+    dernier_msg = premier_msg + 50
+    return 'affichage des messages {} à {}'.format(premier_msg, dernier_msg)
 
 if __name__ == '__main__':
     app.run(debug=True)

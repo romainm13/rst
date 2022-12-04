@@ -1,4 +1,6 @@
 flask
+flask-login
+Flask-SQLAlchemy
 requests
 ipykernel
 

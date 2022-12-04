@@ -15,6 +15,9 @@ python3 -m venv rst_venv
 source rst_venv/bin/activate
 # ou 
 source ./activate
+
+# MAJ pip
+pip install --upgrade pip
 ```
 
 - Install `requirements.txt`
@@ -31,8 +34,9 @@ pip install git+https://github.com/openai/whisper.git
 
 - Install `install.sh`
 
-
 ```bash
 chmod +x …
 sudo ./install.sh
 ```
+
+## ToDo
