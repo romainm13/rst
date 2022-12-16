@@ -1,12 +1,12 @@
 # Environnement
 .vscode
-/rst_venv
+/srt_venv
 __pycache__
 
 ######## WHISPERS ########
 # Results whisper
 /whispers_stats
-/rst_files
+/srt_files
 # Sounds files
 /sounds
 

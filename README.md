@@ -1,23 +1,36 @@
-# rst
+# Audio fileto SRT converter
 
-## Environnement
+## Brief history
+
+I was working on Adobe Premier Pro and I wanted to use the `srt` format to add subtitles to my videos. I looked for online tools to convert my audio files to `srt` format but I didn't find any that I liked. So I decided to create my own tool.
+
+## My Environnement
 
 - WSL Ubuntu-20.04
-- apt update + upgrade
-- Clone repo git `rst`
 
-In `rst` local git:
+## Installing
+
+- Install `install.sh`
 
 ```bash
-python3 -m venv rst_venv
+chmod +x install.sh
+sudo ./install.sh
+```
+
+- create `srt` folder and move inside
+- Clone `srt` git repo: `git clone https://github.com/romainm13/srt_whisper.git`
+- Create `srt_venv` virtual environment
+
+```bash
+python3 -m venv srt_venv
 
 # Activate venv
-source rst_venv/bin/activate
-# ou 
+source srt_venv/bin/activate
+# or
 source ./activate
 
-# MAJ pip
-pip install --upgrade pip
+# Update pip
+python3 -m pip install --upgrade pip
 ```
 
 - Install `requirements.txt`
@@ -30,13 +43,6 @@ pip install -r requirements.txt
 
 ```bash
 pip install git+https://github.com/openai/whisper.git
-```
-
-- Install `install.sh`
-
-```bash
-chmod +x …
-sudo ./install.sh
 ```
 
 ## ToDo
