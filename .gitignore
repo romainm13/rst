@@ -5,8 +5,8 @@ __pycache__
 
 ######## WHISPERS ########
 # Results whisper
-/whispers_stats
-/srt_files
+/whisper_test
+/whisper_api
 # Sounds files
 /sounds
 

@@ -4,21 +4,25 @@
 
 I was working on Adobe Premier Pro and I wanted to use the `srt` format to add subtitles to my videos. I looked for online tools to convert my audio files to `srt` format but I didn't find any that I liked. So I decided to create my own tool.
 
-## My Environnement
+## My Dev Environnement
 
 - WSL Ubuntu-20.04
 
 ## Installing
 
-- Install `install.sh`
+- create `srt` folder and move inside
 
 ```bash
-chmod +x install.sh
-sudo ./install.sh
+mkdir srt
+cd srt
 ```
 
-- create `srt` folder and move inside
-- Clone `srt` git repo: `git clone https://github.com/romainm13/srt_whisper.git`
+- Clone `srt` git repo: 
+
+```bash
+git clone https://github.com/romainm13/srt_whisper.git`
+```
+
 - Create `srt_venv` virtual environment
 
 ```bash
@@ -39,10 +43,24 @@ python3 -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
- - If whisper not installed (all conda packages nvidia, cuda ...) Install git-whisper (but normally ok)
+- Install `install.sh`
 
 ```bash
-pip install git+https://github.com/openai/whisper.git
+chmod +x install.sh
+sudo ./install.sh
 ```
 
+## Flask app
+
+I am first building a Flask app to test the `srt` conversion. I will then build a web app.
+
 ## ToDo
+
+- Control timstamp in srt file
+- Build Flask app
+  - security good ? (way to transfer file ?)
+  - authentification
+
+## Note
+
+-> Launch Whisper Model when launching Flask app (no reload)
